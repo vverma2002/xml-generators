@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<data>
+    <person>
+        <name>$person.name</name>
+        <email>$person.email</email>
+#foreach($address in $person.addresses)
+        <address>
+            <street>$address.street</street>
+            <city>$address.city</city>
+            <country>city.country</country>
+        </address>
+#end
+#if($person.profile)
+        <profile>
+            <username>$person.profile.username</username>
+            <bio>$person.profile.bio</bio>
+        </profile>
+#end
+    </person>
+</data>
